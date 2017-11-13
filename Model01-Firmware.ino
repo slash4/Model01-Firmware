@@ -25,8 +25,8 @@
 // Support for controlling the keyboard's LEDs
 #include "Kaleidoscope-LEDControl.h"
 
-// Support for "Numlock" mode, which is mostly just the Numlock specific LED mode
-#include "Kaleidoscope-Numlock.h"
+// Support for "Numpad" mode, which is mostly just the Numpad specific LED mode
+#include "Kaleidoscope-NumPad.h"
 
 // Support for an "LED off mode"
 #include "LED-Off.h"
@@ -200,9 +200,9 @@ void setup() {
     // The stalker effect lights up the keys you've pressed recently
     &StalkerEffect,
 
-    // The numlock plugin is responsible for lighting up the 'numpad' mode
+    // The numpad plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
-    &NumLock,
+    &NumPad,
 
     // The macros plugin adds support for macros
     &Macros,
@@ -211,9 +211,9 @@ void setup() {
     &MouseKeys
   );
 
-  // While we hope to improve this in the future, the NumLock plugin
+  // While we hope to improve this in the future, the NumPad plugin
   // needs to be explicitly told which keymap layer is your numpad layer
-  NumLock.numPadLayer = NUMPAD;
+  NumPad.numPadLayer = NUMPAD;
 
   // We configure the AlphaSquare effect to use RED letters
   AlphaSquare.color = { 255, 0, 0 };
