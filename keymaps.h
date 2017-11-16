@@ -39,24 +39,71 @@
   * the numbers 0, 1 and 2.
   */
 
-enum { QWERTY, FUNCTION, NUMPAD }; // layers
-
-/* Enable and disable layers by editing the various include directives below.
- * Beware that the include directives MUST be on a line by themselves.
+/*
+ * Enable and disable optional features by editing the include directives below.
+ * In general, only one option of each group should be enabled at any time.
+ * Note that these work by defining aliases and so the order of inclusion is important.
  */
 
-// Use nonstandard modifier keys
-#include "aliases-abg-modifiers.h"
+
+/*
+ * Choose modifier key layout
+ */
+
+// Use stock modifier key layount
+//include "aliases-std-modifiers.h"
+
+// Use kinesis-style modifier key layout
+#include "aliases-abg-modifiers-thumb-enter.h"
+
+// Use ABG's friendly modifier layout
+//include "aliases-abg-modifiers.h"
+
+
+/*
+ * Choose mouse scrolling behaviour
+ * Note: mouse scrolling is not enabled in standard layers
+ */
 
 // Use traditional mouse scrolling
 #include "aliases-abg-scroll-wheel-traditional.h"
 
+// Use "natural" mouse scrolling
+//include "aliases-abg-scroll-wheel-natural.h"
+
+
+/*
+ * Choose the arrangement of the orphan keys 
+ * These are referred to by the qwerty-paramaterized layer
+ */
+
+// Use merlin's second proposed orphan keys
+#include "aliases-abg-orphans-merlin2.h"
+
+// Use Spanish orphan keys
+//include "aliases-abg-orphans-spanish.h"
+
+// Use stock orphan keys
+//include "aliases-std-orphans.h"
+
+
+/*
+ * Define our layer names. These must match the layer structure below.
+ */
+
+enum { QWERTY, NUMPAD, FUNCTION }; // layers
+
+/*
+ * Enable and disable layers by editing the various include directives below.
+ * Beware that the include directives MUST be on a line by themselves.
+ */
+
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
-#include "layer-abg-multilingual.h"
-  , [FUNCTION] =
-#include "layer-abg-function-inverted-t.h"
+#include "layer-std-qwerty-parameterized.h"
   , [NUMPAD] =
 #include "layer-abg-numpad-apple.h"
+  , [FUNCTION] =
+#include "layer-abg-function-inverted-t.h"
 };
 
