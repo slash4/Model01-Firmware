@@ -19,18 +19,18 @@
 // *INDENT-OFF*
 
 KEYMAP_STACKED
-  (___,      ___, ___,           ___,           ___,            ___,        ___,
-   Key_Tab,  ___, ___,           Key_UpArrow,   ___,            ___,        Key_PageUp,
-   Key_Home, ___, Key_LeftArrow, Key_DownArrow, Key_RightArrow, ___,
-   Key_End,  ___, ___,           ___,           ___,            Key_Insert, Key_PageDown,
-   ___, ___, ___, ___,
+  (LockLayer(FUNCTION),      ___,         ___,           ___,           ___,            ___,               Key_LEDEffectNext,
+   Key_Tab,  LALT(Key_2), LALT(Key_3),   Key_UpArrow,   LALT(Key_X),    LALT(Key_C),        Key_Enter,
+   Key_Home, LGUI(Key_L),         Key_LeftArrow, Key_DownArrow, Key_RightArrow, LGUI(Key_Slash),
+   Key_End,  LGUI(RIGHT_OF_P),  LGUI(Key_C),         LGUI(Key_H),         LGUI(Key_U),          LGUI(Key_K),        Key_Spacebar,
+   ___, Key_Delete, ___, ___,
    ___,
 
    M(MACRO_VERSION_INFO),  ___,                 Key_KeypadClear, Key_KeypadEquals,   Key_KeypadDivide,   Key_KeypadMultiply, ___,
    ___,                    ___,                 Key_Keypad7,     Key_Keypad8,        Key_Keypad9,        Key_KeypadSubtract, ___,
                            Key_Backspace,       Key_Keypad4,     Key_Keypad5,        Key_Keypad6,        Key_KeypadAdd,      ___,
    ___,                    Key_KeypadComma,     Key_Keypad1,     Key_Keypad2,        Key_Keypad3,        Key_KeypadEnter,    ___,
-   Key_Keypad000, Key_Keypad00, Key_Keypad0, Key_KeypadDot,
+   ___, ___, Key_KeypadDot, Key_Keypad0,
    ___)
 
 // *INDENT-ON*

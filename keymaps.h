@@ -51,10 +51,10 @@
  */
 
 // Use stock modifier key layount
-//include "aliases-std-modifiers.h"
+#include "aliases-std-modifiers.h"
 
 // Use kinesis-style modifier key layout
-#include "aliases-abg-modifiers-thumb-enter.h"
+//include "aliases-abg-modifiers-thumb-enter.h"
 
 // Use ABG's friendly modifier layout
 //include "aliases-abg-modifiers.h"
@@ -109,7 +109,7 @@
  * Define our layer names. These must match the layer structure below.
  */
 
-enum { QWERTY, NUMPAD, FUNCTION }; // layers
+enum { QWERTY, NUMPAD, ALEX, FUNCTION }; // layers
 
 /*
  * Enable and disable layers by editing the various include directives below.
@@ -120,6 +120,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
 #include "layer-std-qwerty-parameterized.h"
   , [NUMPAD] =
+#include "layer-abg-numpad-apple.h"
+  , [ALEX] =
 #include "layer-abg-numpad-apple.h"
   , [FUNCTION] =
 #include "layer-abg-function-inverted-t.h"
