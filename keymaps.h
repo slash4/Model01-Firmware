@@ -109,7 +109,7 @@
  * Define our layer names. These must match the layer structure below.
  */
 
-enum { QWERTY, NUMPAD, ALEX, FUNCTION }; // layers
+enum { QWERTY, NUMPAD, ALEX, FUNCTION, MACRO }; // layers
 
 /*
  * Enable and disable layers by editing the various include directives below.
@@ -125,5 +125,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 #include "layer-abg-numpad-apple.h"
   , [FUNCTION] =
 #include "layer-abg-function-inverted-t.h"
+  , [MACRO] =
+#include "layer-macro.h"
 };
 

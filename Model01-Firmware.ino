@@ -38,6 +38,9 @@
 // when the keyboard is connected to a computer (or that computer is powered on)
 #include "Kaleidoscope-LEDEffect-BootGreeting.h"
 
+// Welcome to the matrix
+#include "Kaleidoscope-LEDEffect-DigitalRain.h"
+
 // Support for LED modes that set all LEDs to a single color
 //include "Kaleidoscope-LEDEffect-SolidColor.h"
 
@@ -78,7 +81,12 @@
 
 enum { MACRO_VERSION_INFO,
        MACRO_ANY,
-       MACRO_PLUS
+       MACRO_PLUS,
+       MACRO_RUBYPLACEHOLDER,
+       MACRO_GITCOPREPROD,
+       MACRO_GITMERGEPREPROD,
+       MACRO_GITCOMASTER,
+       MACRO_GITMERGEMASTER
      };
 
 // Keymap definitions
@@ -121,6 +129,7 @@ static void plusMacro(uint8_t keyState) {
 }
 
 
+
 /** macroAction dispatches keymap events that are tied to a macro
     to that macro. It takes two uint8_t parameters.
 
@@ -146,7 +155,32 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
   case MACRO_PLUS:
     plusMacro(keyState);
-    break;  
+    break; 
+
+  case MACRO_RUBYPLACEHOLDER:
+    return MACRODOWN(I(5), T(1), D(LeftShift), T(Backtick), U(LeftShift), D(LeftAlt), T(X), T(C), U(LeftAlt), T(1));
+    break;
+
+  case MACRO_GITCOPREPROD:
+    if (keyToggledOn(keyState)) {
+      return Macros.type(PSTR(";dj hr elfelri"));
+    }
+
+  case MACRO_GITMERGEPREPROD:
+    if (keyToggledOn(keyState)) {
+      return Macros.type(PSTR(";dj ùfl;f elfelri"));
+    }
+
+  case MACRO_GITCOMASTER:
+    if (keyToggledOn(keyState)) {
+      return Macros.type(PSTR(";dj hr ùqkjfl"));
+    }
+
+  case MACRO_GITMERGEMASTER:
+    if (keyToggledOn(keyState)) {
+      return Macros.type(PSTR(";dj ùfl;f ùqkjfl"));
+    }
+    break;
 
   }
   return MACRO_NONE;
@@ -195,6 +229,8 @@ void setup() {
 
     // We start with the LED effect that turns off all the LEDs.
     &LEDOff,
+
+    &LEDDigitalRainEffect,
 
     // The rainbow effect changes the color of all of the keyboard's keys at the same time
     // running through all the colors of the rainbow.
@@ -256,11 +292,15 @@ void setup() {
   //StalkerEffect.variant = STALKER(BlazingTrail);
 
 
+  MouseKeys.accelDelay = 800;
+  MouseKeys.speed = 40;
+
+
 
   // We want to make sure that the firmware starts with LED effects off
   // This avoids over-taxing devices that don't have a lot of power to share
   // with USB devices
-  LEDRainbowWaveEffect.activate();
+  LEDDigitalRainEffect.activate();
 }
 
 /** loop is the second of the standard Arduino sketch functions.

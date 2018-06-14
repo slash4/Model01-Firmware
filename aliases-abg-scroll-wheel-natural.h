@@ -4,3 +4,5 @@
 
 #define SCROLL_UP Key_mouseScrollDn
 #define SCROLL_DOWN Key_mouseScrollUp
+#define SCROLL_LEFT Key_mouseScrollL
+#define SCROLL_RIGHT Key_mouseScrollR

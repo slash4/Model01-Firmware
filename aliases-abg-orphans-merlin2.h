@@ -7,7 +7,7 @@
  * use one of the ABG Fn layers so that PgUp and PgDn can be accessed.
  */
 
-#define LEFT_OF_1   M(MACRO_PLUS)
+#define LEFT_OF_1   ShiftToLayer(MACRO)
 #define LEFT_OF_Q		Key_Backtick
 #define LEFT_OF_A		Key_RightBracket
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
