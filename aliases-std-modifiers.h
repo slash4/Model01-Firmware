@@ -16,7 +16,7 @@
 
 #define MOD_R_THUMB_0 Key_Spacebar
 #define MOD_R_THUMB_1 Key_RightShift
-#define MOD_R_THUMB_2 Key_RightGui
+#define MOD_R_THUMB_2 LALT(Key_Spacebar)
 #define MOD_R_THUMB_3 Key_RightControl
 #define MOD_R_PALM    ShiftToLayer(FUNCTION)
 

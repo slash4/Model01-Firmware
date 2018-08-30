@@ -41,6 +41,10 @@
 // Welcome to the matrix
 #include "Kaleidoscope-LEDEffect-DigitalRain.h"
 
+// Functionnal colors
+#include "Kaleidoscope-LEDEffect-FunctionalColor.h"
+kaleidoscope::LEDFunctionalColor::FCPlugin funColor;
+
 // Support for LED modes that set all LEDs to a single color
 //include "Kaleidoscope-LEDEffect-SolidColor.h"
 
@@ -231,6 +235,8 @@ void setup() {
     &LEDOff,
 
     &LEDDigitalRainEffect,
+
+    &funColor,
 
     // The rainbow effect changes the color of all of the keyboard's keys at the same time
     // running through all the colors of the rainbow.
