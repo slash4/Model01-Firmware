@@ -17,9 +17,9 @@ KEYMAP_STACKED
    ___, ___, ___, ___,
    ___,
 
-   ___,     M(MACRO_GITCOPREPROD), M(MACRO_GITCOMASTER), ___,     ___,      ___,         ___,
-   ___,  M(MACRO_GITMERGEPREPROD), M(MACRO_GITMERGEMASTER), ___,     ___,      ___,         ___,
-                  ___, ___, ___,     ___,      ___, ___,
+   ___,  ___, ___, ___,     ___,      ___,         ___,
+   ___,  ___, M(MACRO_GITCOPREPROD), M(MACRO_GITCOMASTER),     M(MACRO_GITMERGEPREPROD),      M(MACRO_GITMERGEMASTER),         ___,
+                  ___, M(MACRO_GITCOMMIT), M(MACRO_GITST),     ___,      ___, ___,
    ___, ___, ___, ___, ___, ___,     ___,
    ___, ___, ___, ___,
    ___)

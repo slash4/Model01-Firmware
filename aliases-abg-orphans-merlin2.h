@@ -9,7 +9,7 @@
 
 #define LEFT_OF_1   ShiftToLayer(MACRO)
 #define LEFT_OF_Q		Key_Backtick
-#define LEFT_OF_A		Key_RightBracket
+#define LEFT_OF_A		Key_Z
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
 
 #define RIGHT_OF_5		Key_Minus

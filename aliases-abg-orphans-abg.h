@@ -8,7 +8,7 @@
 
 #define LEFT_OF_1		___
 #define LEFT_OF_Q		Key_Backtick
-#define LEFT_OF_A		Key_Backslash
+#define LEFT_OF_A		Key_T
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
 
 #define RIGHT_OF_5		Key_LEDEffectNext

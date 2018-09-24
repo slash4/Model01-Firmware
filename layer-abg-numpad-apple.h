@@ -21,8 +21,8 @@
 KEYMAP_STACKED
   (LockLayer(FUNCTION),      LALT(Key_4),         LALT(Key_5),           LALT(Key_Spacebar),           LALT(LEFT_OF_Z),            LALT(Key_Z),               Key_LEDEffectNext,
    Key_Tab,  LALT(Key_2), LALT(Key_3),   Key_UpArrow,   LALT(Key_X),    LALT(Key_C),        Key_Enter,
-   Key_Home, LGUI(Key_L),         Key_LeftArrow, Key_DownArrow, Key_RightArrow, LGUI(Key_Slash),
-   Key_End,  LGUI(RIGHT_OF_P),  LGUI(Key_C),         LGUI(Key_H),         LGUI(Key_U),          LGUI(Key_K),        Key_Spacebar,
+   LGUI(Key_L), LGUI(Key_A),         Key_LeftArrow, Key_DownArrow, Key_RightArrow, LGUI(Key_Slash),
+   LGUI(Key_J),  LGUI(RIGHT_OF_P),  LGUI(Key_C),         LGUI(Key_H),         LGUI(Key_U),          LGUI(Key_K),        Key_Spacebar,
    Key_Delete, ___, ___, ___,
    ___,
 
@@ -30,7 +30,7 @@ KEYMAP_STACKED
    Key_Tab,                    ___,                 Key_Keypad7,     Key_Keypad8,        Key_Keypad9,        Key_KeypadSubtract, ___,
                            Key_Backspace,       Key_Keypad4,     Key_Keypad5,        Key_Keypad6,        Key_KeypadAdd,      ___,
    LSHIFT(Key_Backtick),                    Key_V,    Key_Keypad1,     Key_Keypad2,        Key_Keypad3,        Key_KeypadEnter,    ___,
-   ___, ___, Key_KeypadDot, Key_Keypad0,
+   ___, LALT(LEFT_OF_Z), Key_KeypadDot, Key_Keypad0,
    ___)
 
 // *INDENT-ON*

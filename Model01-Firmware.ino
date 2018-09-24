@@ -90,7 +90,9 @@ enum { MACRO_VERSION_INFO,
        MACRO_GITCOPREPROD,
        MACRO_GITMERGEPREPROD,
        MACRO_GITCOMASTER,
-       MACRO_GITMERGEMASTER
+       MACRO_GITMERGEMASTER,
+       MACRO_GITCOMMIT,
+       MACRO_GITST
      };
 
 // Keymap definitions
@@ -162,29 +164,41 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
     break; 
 
   case MACRO_RUBYPLACEHOLDER:
-    return MACRODOWN(I(5), T(1), D(LeftShift), T(Backtick), U(LeftShift), D(LeftAlt), T(X), T(C), U(LeftAlt), T(1));
+    return MACRODOWN(I(5), D(LeftShift), T(Backtick), U(LeftShift), D(LeftAlt), T(X), T(C), U(LeftAlt));
     break;
 
   case MACRO_GITCOPREPROD:
     if (keyToggledOn(keyState)) {
-      return Macros.type(PSTR(";dj hr elfelri"));
+      return Macros.type(PSTR(",dj hr elfelri"));
     }
 
   case MACRO_GITMERGEPREPROD:
     if (keyToggledOn(keyState)) {
-      return Macros.type(PSTR(";dj ùfl;f elfelri"));
+      return Macros.type(PSTR(",dj 'fl,f elfelri"));
     }
 
   case MACRO_GITCOMASTER:
     if (keyToggledOn(keyState)) {
-      return Macros.type(PSTR(";dj hr ùqkjfl"));
+      return Macros.type(PSTR(",dj hr 'akjfl"));
     }
 
   case MACRO_GITMERGEMASTER:
     if (keyToggledOn(keyState)) {
-      return Macros.type(PSTR(";dj ùfl;f ùqkjfl"));
+      return Macros.type(PSTR(",dj 'fl,f 'akjfl"));
     }
     break;
+
+  case MACRO_GITCOMMIT:
+    if (keyToggledOn(keyState)) {
+      return Macros.type(PSTR(",dj hr''dj 8' n"));
+    }
+    break;
+    
+  case MACRO_GITST:
+    if (keyToggledOn(keyState)) {
+      return Macros.type(PSTR(",dj kj"));
+    }
+    break;  
 
   }
   return MACRO_NONE;
